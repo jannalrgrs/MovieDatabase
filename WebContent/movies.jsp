@@ -15,8 +15,8 @@
 <input type="text" name="Category">&nbsp &nbsp &nbsp
 <input type = "submit" value="search"> -->
 
-<%
 
+<%
 String category = request.getParameter("Category");
 
 Class.forName("com.mysql.jdbc.Driver");
@@ -43,12 +43,12 @@ if (category==null || category.isEmpty()){
 		out.print("<td>" + rs.getString(1) + "</td>"); //rs starts with 1, not 0
 		out.print("<td>" + rs.getString(2) + "</td>");
 			 
-		//out.print("<td><img src=\"images" + rs.getString(3) + "/></td>");
+		out.print("<td><img src=WebContent\"images" + rs.getString(3) + "/></td>");
 			out.print("</table>");
 		
 		//to do: 1.) add search via title 2.) add background 3.) fix image path in table
+%>
 
-	 %>
 	
 </form>
 
